@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>PuzzlePeak</title>
+    <link rel="stylesheet" href="../puzzle.css" />
+  </head>
+  <body>
+    <div class="main_container">
+      <div class="nav_bar">
+        <div class="nav_bar_item1">
+          <button class="toggle-btn" id="toggleSidebar">&#9776;</button>
+        </div>
+        <div class="nav_bar_item2">
+          <p>Puzzle Peak</p>
+        </div>
+      </div>
+      <div class="dashboard">
+        <div class="side_bar">
+          <div class="side_header_bar">
+            <div>
+              <p>Target Counts</p>
+            </div>
+          </div>
+          <div class="side_bar_contents">
+            <div class="params">
+              <p>&#xbb; Time Left: <span id="countDown"></span> Sec</p>
+            </div>
+
+            <div class="params">
+              <p>&#xbb; Available Moves: <span id="movesCount"></span></p>
+            </div>
+
+            <div class="params">
+              <p>&#xbb; Matching Count: <span id="matchValue"></span> items</p>
+            </div>
+
+            <div class="params">
+              <p>
+                &#xbb; Dismatching Count: <span id="disMatchValue"></span> items
+              </p>
+            </div>
+          </div>
+          <div class="side_footer_bar">
+            <button class="exitButton" id="restartBtn">Restart</button>
+            <button class="hintButton" id="hintBtn">Hint</button>
+            <button class="exitButton" id="exitBtn">Exit</button>
+          </div>
+        </div>
+        <div id="puzzle_container" class="puzzle_container">
+          <div class="puzzle_contents_3x3" id="3x3_puzzle">
+            <div id="puzzle_board1"></div>
+          </div>
+          <div class="puzzle_contents_4x4" id="4x4_puzzle">
+            <div id="puzzle_board2"></div>
+          </div>
+          <div id="myHintPopup" class="hint_puzzle_contents">
+            <div id="hint_board">
+              <img src="../assets/Main.png" alt="Hint_image" />
+            </div>
+          </div>
+        </div>
+        <div id="succes" class="popup">
+          <div class="popup-content">
+            <h1>Congratulations!</h1>
+            <button id="playAgain">Play Again!</button>
+            <button id="closePopup">Close</button>
+          </div>
+        </div>
+        <div id="failure" class="popup">
+          <div class="popup-content">
+            <h1>Oops! Try Again.</h1>
+            <button id="restartPopup">Restart</button>
+          </div>
+        </div>
+      </div>
+    </div>
+    <script src="puzzle.js"></script>
+  </body>
+</html>

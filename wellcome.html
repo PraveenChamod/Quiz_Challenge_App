@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>PuzzlePeak_Wellcome</title>
+    <link rel="stylesheet" href="puzzle.css" />
+  </head>
+  <body>
+    <div class="main_wellcome_container">
+      <div class="title">
+        <p>Puzzle Peak</p>
+      </div>
+      <div class="wellcome_dashboard">
+        <div class="wellcome_section">
+          <p class="wellcome_text">Wellcome To The Mind Challenge!</p>
+
+          <div class="puzzle_size">
+            <div class="left_puzzle_size">
+              <label for="language">Puzzle Size:</label>
+            </div>
+            <div class="right_puzzle_size">
+              <select name="language" id="language">
+                <option value="3" selected>3 x 3</option>
+                <option value="4">4 x 4</option>
+              </select>
+            </div>
+          </div>
+          <button class="playnowbtn" id="playButton">Play Now &#xbb;</button>
+          <img
+            class="wellcome_bg"
+            src="./assets/Main.png"
+            alt="wellcome_image"
+          />
+        </div>
+      </div>
+    </div>
+    <script>
+      const playButton = document.getElementById("playButton");
+      playButton.addEventListener("click", function () {
+        const selectedOption = document.getElementById("language").value;
+        if (selectedOption) {
+          localStorage.setItem("selectedOption", selectedOption);
+        }
+        window.location.href = "pages/puzzle.html";
+      });
+    </script>
+  </body>
+</html>
